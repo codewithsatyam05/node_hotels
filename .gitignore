@@ -1,4 +1,7 @@
 # Ignore node_modules directory
 node_modules/
+package-lock.json/
+package.json/
+.env
 
 # Ignore log files

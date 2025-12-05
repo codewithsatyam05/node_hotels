@@ -39,10 +39,17 @@
 
 const mongoose = require('mongoose');
 
-mongoose.connect('mongodb://localhost:27017/My-hotels').then(() => {
-  console.log('Connected to MongoDB');
-} ).catch((err) => { console.error('Failed to connect to MongoDB', err);
-}); 
+// mongoose.connect('mongodb://localhost:27017/My-hotels').then(() => {
+//   console.log('Connected to MongoDB');
+// } ).catch((err) => { console.error('Failed to connect to MongoDB', err);
+// }); 
+
+const DB_URL = process.env.DB_URL || 'mongodb://localhost:27017/My-hotels'; 
+
+// mongoose.connect('mongodb+srv://codewithsatyam05_db_user:BEcgj4Z1o9hm66Jm@hotels.kls8yix.mongodb.net/').then(() => {
+//   console.log('Connected to MongoDB');
+// } ).catch((err) => { console.error('Failed to connect to MongoDB', err);
+// }); 
 
 const userSchema = new mongoose.Schema({
   name: { 
